@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %>
+
+  <body style="background-image: url('<%= backgroundImage %>');" class="home-page">
+    <%- include("partials/header", { planetNames: planetNames }) %>
+
+    <main class="content-box">
+      <h2>Welcome to the Solar System</h2>
+      <p>This website lets you explore the planets and view NASA's Picture of the Day.</p>
+      <p>Use the navigation menu above to choose a planet.</p>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+<header>
+  <h1>Solar System App</h1>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/nasa">NASA POD</a>
+
+    <% planetNames.forEach(function(planet) { %>
+      <a href="/planet?planetName=<%= planet %>"><%= planet %></a>
+    <% }) %>
+  </nav>
+</header>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %>
+
+  <body>
+    <%- include("partials/header", { planetNames: planetNames }) %>
+
+    <main class="content-box">
+      <h2><%= planetInfo.planetName %></h2>
+
+      <ul>
+        <li><strong>Number of Moons:</strong> <%= planetInfo.moons %></li>
+        <li><strong>Radius:</strong> <%= planetInfo.radius %></li>
+        <li><strong>Distance from the Sun:</strong> <%= planetInfo.distanceFromSun %></li>
+        <li><strong>Length of Day:</strong> <%= planetInfo.dayLength %></li>
+        <li><strong>Length of Year:</strong> <%= planetInfo.yearLength %></li>
+        <li><strong>Color:</strong> <%= planetInfo.color %></li>
+      </ul>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

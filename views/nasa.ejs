@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %>
+
+  <body>
+    <%- include("partials/header", { planetNames: planetNames }) %>
+
+    <main class="content-box">
+      <h2>NASA Picture of the Day</h2>
+
+      <h3><%= nasaData.title %></h3>
+
+      <% if (nasaData.media_type === "image") { %>
+        <img src="<%= nasaData.url %>" alt="<%= nasaData.title %>" class="nasa-img">
+      <% } else { %>
+        <p>This APOD is not an image today.</p>
+        <p><a href="<%= nasaData.url %>" target="_blank">Open NASA media</a></p>
+      <% } %>
+
+      <p><%= nasaData.explanation %></p>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>
